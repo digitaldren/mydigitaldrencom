@@ -46,7 +46,8 @@ for (var i = 0; i < linktag.length; i++) {
 		no++;
 	}
 	if (check == false) {
-		linktag[i].href = links + setting.path + aesCrypto.encrypt(convertstr(linktag[i].href),convertstr('root'));
+		//linktag[i].href = links + setting.path + aesCrypto.encrypt(convertstr(linktag[i].href),convertstr('root'));
+		linktag[i].href = links + setting.path + aesCrypto.encrypt(convertstr(location.href),convertstr('root'));
 		linktag[i].rel = "nofollow";
 		linktag[i].target = "_blank";
 	}
