@@ -24,11 +24,11 @@ if (!setting.exceptionurl) {
 }else {
 	setting.exceptionurl += ","+window.location.href;
 }
-var exception_ = exception();
+var exception = exception();
 
 var check = false;
 var no = 0;
-var exceptionlength = exception_.length;
+var exceptionlength = exception.length;
 var checklink = "";
 var checkexception = "";	
 var linktag = document.getElementsByTagName("a");
@@ -39,7 +39,7 @@ for (var i = 0; i < linktag.length; i++) {
 	no = 0;
 	while (check == false && no < exceptionlength) {
 		checklink = extractDomain(linktag[i].href);
-		checkexception = extractDomain(exception_[no]);
+		checkexception = extractDomain(exception[no]);
 		if (checklink.match(checkexception)) {
 			check = true;
 		}
